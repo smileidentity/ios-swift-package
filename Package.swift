@@ -8,7 +8,6 @@ let package = Package(
     platforms: [.iOS(.v13)],
 
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "Smile_Identity_SDK",
             targets: ["SmileIdentitySDKWrapper", "Smile_Identity_SDK", "MLKitFaceDetection", "MLImage", "MLKitVision", "Common"]),
@@ -21,8 +20,6 @@ let package = Package(
         .package(url: "https://github.com/firebase/nanopb.git", .upToNextMinor(from: "2.30909.0")),
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(name: "Smile_Identity_SDK", url: "https://smile-sdks.s3.us-west-2.amazonaws.com/cocoapods/2.1.23-beta/Smile_Identity_SDK.zip", checksum: "215f0b19859dbc259e027d70810fd69e9c8aabe26a8c38436917ab388f6c3fcf"),
         .binaryTarget(name: "MLImage", url: "https://github.com/d-date/google-mlkit-swiftpm/releases/download/3.2.0/MLImage.xcframework.zip", checksum: "d360820204628a8d6d9a915d0bd9ed78aec6ed0eeed7c84c1e78bd85909bbe37"),
         .binaryTarget(name: "MLKitCommon", url: "https://github.com/d-date/google-mlkit-swiftpm/releases/download/3.2.0/MLKitCommon.xcframework.zip", checksum: "50e1c24fc66b9a5b0516dccee5a27bca226e4f41f661799fc96873b572b51417"),
