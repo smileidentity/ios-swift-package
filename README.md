@@ -23,7 +23,7 @@ Add these flags to `Other Linker Flags` in Build Settings of your Xcode projects
 
 ### Link `.bundle` to your project
 
-The `MLKitFaceDetection` contains `GoogleMVFaceDetectorResources.bundle`. Since the bundle can't be introduced via Swift PM, you need to link to your project manually.
+The `MLKitFaceDetection` module requires `GoogleMVFaceDetectorResources.bundle`. Since the bundle can't be introduced via Swift PM, you need to link to your project manually.
 
 Download `GoogleMVFaceDetectorResources.bundle` from [Release](https://github.com/d-date/google-mlkit-swiftpm/releases/download/3.2.0/GoogleMVFaceDetectorResources.bundle.zip) and add to your Xcode project and make it available in your build target.
 
