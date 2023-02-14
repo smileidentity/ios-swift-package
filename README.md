@@ -21,12 +21,12 @@ Add these flags to `Other Linker Flags` in Build Settings of your Xcode projects
 - `-ObjC`
 - `-all_load`
 
-### Link `.bundle` to your project
+### Link `.bundle` file to your project
 
 The `MLKitFaceDetection` module requires `GoogleMVFaceDetectorResources.bundle`. Since the bundle can't be introduced via Swift PM, you need to link to your project manually.
 
-Download `GoogleMVFaceDetectorResources.bundle` from [Release](https://github.com/d-date/google-mlkit-swiftpm/releases/download/3.2.0/GoogleMVFaceDetectorResources.bundle.zip) and add to your Xcode project and make it available in your build target.
+Download `GoogleMVFaceDetectorResources.bundle` from [here](https://github.com/d-date/google-mlkit-swiftpm/releases/download/3.2.0/GoogleMVFaceDetectorResources.bundle.zip) add it to your Xcode project and build target.
 
 ## Limitation
 
-- Because the pre-built MLKit binary does not support `arm64` architechure for iphonesimulator, this project enables to build in `arm64` for iphoneos and `x86_64` for iphonesimulator only.
+- Because the pre-built MLKit binary does not support `arm64` architechure for iphonesimulator, this project can only be run on `arm64` for iphoneos and `x86_64` for iphonesimulator.
