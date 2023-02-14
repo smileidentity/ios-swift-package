@@ -23,7 +23,7 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .binaryTarget(name: "Smile_Identity_SDK", url: "https://smile-sdks.s3.us-west-2.amazonaws.com/cocoapods/2.1.22/Smile_Identity_SDK.zip", checksum: "d42622c880a9d27c91f51015513a332ecb0b1e5015f64987973ec08f6d2c9403"),
+        .binaryTarget(name: "Smile_Identity_SDK", url: "https://smile-sdks.s3.us-west-2.amazonaws.com/cocoapods/2.1.23-beta/Smile_Identity_SDK.zip", checksum: "d42622c880a9d27c91f51015513a332ecb0b1e5015f64987973ec08f6d2c9403"),
         .binaryTarget(name: "MLImage", url: "https://github.com/d-date/google-mlkit-swiftpm/releases/download/3.2.0/MLImage.xcframework.zip", checksum: "d360820204628a8d6d9a915d0bd9ed78aec6ed0eeed7c84c1e78bd85909bbe37"),
         .binaryTarget(name: "MLKitCommon", url: "https://github.com/d-date/google-mlkit-swiftpm/releases/download/3.2.0/MLKitCommon.xcframework.zip", checksum: "50e1c24fc66b9a5b0516dccee5a27bca226e4f41f661799fc96873b572b51417"),
         .binaryTarget(name: "MLKitFaceDetection", url: "https://github.com/d-date/google-mlkit-swiftpm/releases/download/3.2.0/MLKitFaceDetection.xcframework.zip", checksum: "dbdc769316aa27e316a6404ee9cac847265e0ba6a164f680d10aaa192978fdfb"),
@@ -58,11 +58,10 @@ let package = Package(
                     "MLKitFaceDetection", "MLImage", "MLKitVision", "Common", "Smile_Identity_SDK"
                 ],
                 path: "Sources/Smile_Identity_SDK",
-                resources: [.process("Assets")]
-               ),
-        .testTarget(
-            name: "Smile_Identity_SDK_Tests",
-            dependencies: ["Smile_Identity_SDK"],
-            path: "Tests")
+                resources: [.process("Assets")],
+                swiftSettings: [
+                    .define("SPM")
+                ]
+               )
     ]
 )
