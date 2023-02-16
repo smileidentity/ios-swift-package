@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "Smile_Identity_SDK",
-    platforms: [.iOS(.v13)],
+    platforms: [.iOS(.v12)],
 
     products: [
         .library(
