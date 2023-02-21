@@ -4,7 +4,7 @@ This is a swift package manager wrapper for the Smile Identity iOS SDK.
 
 
 ## Requirements
-- iOS 13 or later
+- iOS 12 or later
 - Xcode 13.2.1 or later
 
 ## Installation
